@@ -8,10 +8,10 @@ const GlutenIcon = ({ innerColor, outerColor, ...props }) => {
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M0 107.75c0 59.59 48.17 108.11 107.74 108.11 59.93 0 108.09-48.52 108.09-108.11C215.83 47.81 167.67 0 107.74 0 48.17 0 0 47.81 0 107.75z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={style}
@@ -99,7 +99,7 @@ const GlutenIcon = ({ innerColor, outerColor, ...props }) => {
 
 GlutenIcon.defaultProps = {
   outerColor: '#ee7440',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 GlutenIcon.propTypes = {
   ...SvgWrapper.propTypes,

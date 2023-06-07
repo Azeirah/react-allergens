@@ -11,10 +11,10 @@ const PeanutIcon = ({ innerColor, outerColor, ...props }) => {
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M107.74 215.86C48.16 215.86 0 167.34 0 107.76 0 47.81 48.16 0 107.74 0c59.93 0 108.08 47.81 108.08 107.76.01 59.58-48.15 108.1-108.08 108.1z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={{ fill: innerColor }}
@@ -38,7 +38,7 @@ const PeanutIcon = ({ innerColor, outerColor, ...props }) => {
 
 PeanutIcon.defaultProps = {
   outerColor: '#c57b4f',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 PeanutIcon.propTypes = {
   ...SvgWrapper.propTypes,

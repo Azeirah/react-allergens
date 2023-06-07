@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SvgWrapper from './SvgWrapper';
 
-const SoyaIcon = ({ innerColor, outerColor, ...props }) => {
+const SoyaIcon = ({outerColor, ...props }) => {
   const style = {
-    fill: innerColor,
+    fill: "white",
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M107.73 215.86C48.16 215.86 0 167.34 0 107.76 0 47.81 48.16 0 107.73 0c59.94 0 108.09 47.81 108.09 107.76.01 59.58-48.15 108.1-108.09 108.1z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={style}
@@ -27,12 +27,11 @@ const SoyaIcon = ({ innerColor, outerColor, ...props }) => {
 
 SoyaIcon.defaultProps = {
   outerColor: '#009a4c',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 SoyaIcon.propTypes = {
   ...SvgWrapper.propTypes,
   outerColor: PropTypes.string,
-  innerColor: PropTypes.string,
 };
 
 export default SoyaIcon;

@@ -4,10 +4,10 @@ import SvgWrapper from './SvgWrapper';
 
 const SulphiteIcon = ({ innerColor, outerColor, ...props }) => {
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M107.74 215.86C48.16 215.86 0 167.34 0 107.75 0 47.81 48.16 0 107.74 0c59.93 0 108.08 47.81 108.08 107.75.01 59.59-48.15 108.11-108.08 108.11z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={{
@@ -21,7 +21,7 @@ const SulphiteIcon = ({ innerColor, outerColor, ...props }) => {
 
 SulphiteIcon.defaultProps = {
   outerColor: '#8d2f51',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 SulphiteIcon.propTypes = {
   ...SvgWrapper.propTypes,

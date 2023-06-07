@@ -8,10 +8,10 @@ const CeleryIcon = ({ innerColor, outerColor, ...props }) => {
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M107.73 215.86C48.16 215.86 0 167.34 0 107.75 0 47.81 48.16 0 107.73 0c59.94 0 108.09 47.81 108.09 107.75.01 59.59-48.15 108.11-108.09 108.11z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={style}
@@ -36,7 +36,7 @@ const CeleryIcon = ({ innerColor, outerColor, ...props }) => {
 
 CeleryIcon.defaultProps = {
   outerColor: '#4cad3b',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 CeleryIcon.propTypes = {
   ...SvgWrapper.propTypes,

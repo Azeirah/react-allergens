@@ -4,11 +4,11 @@ import SvgWrapper from './SvgWrapper';
 
 const MustardIcon = ({ innerColor, outerColor, ...props }) => {
   const style = {
-    fill: outerColor,
+    fill: "currentColor",
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         style={style}
         d="M31.66 32.49c42.58-43.32 111.86-43.32 154.43 0 42.94 42.97 42.94 112.86 0 155.81-42.58 42.97-111.86 42.97-154.43 0-42.21-42.94-42.21-112.84 0-155.81z"
@@ -40,7 +40,7 @@ const MustardIcon = ({ innerColor, outerColor, ...props }) => {
 
 MustardIcon.defaultProps = {
   outerColor: '#c69838',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 MustardIcon.propTypes = {
   ...SvgWrapper.propTypes,

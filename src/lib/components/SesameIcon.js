@@ -4,10 +4,10 @@ import SvgWrapper from './SvgWrapper';
 
 const SesameIcon = ({ innerColor, outerColor, ...props }) => {
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M107.74 215.86C48.15 215.86 0 167.34 0 107.75 0 47.81 48.15 0 107.74 0c59.93 0 108.08 47.81 108.08 107.75.01 59.59-48.15 108.11-108.08 108.11z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={{
@@ -21,7 +21,7 @@ const SesameIcon = ({ innerColor, outerColor, ...props }) => {
 
 SesameIcon.defaultProps = {
   outerColor: '#a89a7b',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 SesameIcon.propTypes = {
   ...SvgWrapper.propTypes,

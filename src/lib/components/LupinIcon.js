@@ -4,10 +4,10 @@ import SvgWrapper from './SvgWrapper';
 
 const LupinIcon = ({ innerColor, outerColor, ...props }) => {
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         style={{
-          fill: outerColor,
+          fill: "currentColor",
         }}
         d="M215.65 107.61c0 59.51-48.49 107.61-108.01 107.61C48.11 215.22 0 167.12 0 107.61 0 48.08 48.11 0 107.64 0c59.52 0 108.01 48.08 108.01 107.61z"
       />
@@ -19,7 +19,7 @@ const LupinIcon = ({ innerColor, outerColor, ...props }) => {
       />
       <path
         style={{
-          fill: outerColor,
+          fill: "currentColor",
         }}
         d="M147.45 37.45c4.73.39 8.27-.4 8.67-1.59 0-1.17-3.55-2.36-8.28-2.36-4.73-.39-8.28 0-8.28 1.19-.39 1.17 3.56 2.36 7.89 2.76zM59.93 75.29c4.73 0 8.27-1.19 8.27-2.37 0-1.18-3.55-1.97-8.27-1.97s-8.27.79-8.27 1.97 3.54 2.37 8.27 2.37zM149.03 166.74c-2.77 3.55-4.34 7.09-3.55 7.89 1.18.78 3.94-1.58 6.7-5.13 2.77-3.94 4.34-7.5 3.55-8.28-1.18-.4-3.95 1.96-6.7 5.52z"
       />
@@ -29,7 +29,7 @@ const LupinIcon = ({ innerColor, outerColor, ...props }) => {
 
 LupinIcon.defaultProps = {
   outerColor: '#f6d24e',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 LupinIcon.propTypes = {
   ...SvgWrapper.propTypes,

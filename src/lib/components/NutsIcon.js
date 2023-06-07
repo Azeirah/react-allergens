@@ -8,10 +8,10 @@ const NutsIcon = ({ innerColor, outerColor, ...props }) => {
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M107.51 215.86C48.05 215.86 0 167.34 0 107.75 0 47.82 48.05 0 107.51 0c59.81 0 107.88 47.82 107.88 107.75 0 59.59-48.07 108.11-107.88 108.11z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={style}
@@ -27,7 +27,7 @@ const NutsIcon = ({ innerColor, outerColor, ...props }) => {
 
 NutsIcon.defaultProps = {
   outerColor: '#cf4d51',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 NutsIcon.propTypes = {
   ...SvgWrapper.propTypes,

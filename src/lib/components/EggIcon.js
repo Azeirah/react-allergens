@@ -8,10 +8,10 @@ const EggIcon = ({ innerColor, outerColor, ...props }) => {
   };
 
   return (
-    <SvgWrapper {...props}>
+    <SvgWrapper {...props} style={{color: outerColor}}>
       <path
         d="M215.84 107.75c0 59.59-48.17 108.11-108.09 108.11C48.17 215.86 0 167.34 0 107.75 0 47.81 48.17 0 107.75 0c59.92 0 108.09 47.81 108.09 107.75z"
-        fill={outerColor}
+        fill="currentColor"
       />
       <path
         style={style}
@@ -23,7 +23,7 @@ const EggIcon = ({ innerColor, outerColor, ...props }) => {
 
 EggIcon.defaultProps = {
   outerColor: '#f39339',
-  innerColor: '#fefefe',
+  innerColor: 'white',
 };
 EggIcon.propTypes = {
   ...SvgWrapper.propTypes,
